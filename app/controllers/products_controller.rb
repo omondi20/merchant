@@ -37,6 +37,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def product_params
+    params.require(:product).permit(:title, :price, :description, :image_url, :stock)
+  end
+
+
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update

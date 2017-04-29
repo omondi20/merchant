@@ -4,3 +4,11 @@ module ProductsHelper
   number_to_currency price
   end
 end
+
+def print_stock(stock)
+  if stock > 0
+print "In stock"
+  else
+print "Out of stock"
+  end
+end
