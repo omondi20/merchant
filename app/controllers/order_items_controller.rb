@@ -81,3 +81,6 @@ class OrderItemsController < ApplicationController
       params.require(:order_item).permit(:product_id, :order_id, :quantity)
     end
 end
+
+def subtotal
+  end
