@@ -4,6 +4,8 @@
   <tr>
     <th>Customer</th>
     <td><%= @order.user_id %></td>
+    <td><%= @order.user.name if @order.user %></td>
+
   </tr>
   <tr>
     <th>Status:</th>
@@ -13,12 +15,21 @@
     <th>Items:</th>
     <td><%= @order.order_items.count %></td>
   </tr>
+
+<td><%=Order Total%></td>
   <tr>
     <th>Items</th>
     <th>Title</th>
     <th>Quantity</th>
+    <th>Stock</th>
     <th>Unit Price</th>
     <th>Subtotal</th>
   </tr>
-  <!-- more code will go here -->
+  <% @order.order_items.each do |item| %>
+
+<% end %>
+  <p>
+    Item Count: <%= @order.order_items.count %>
+  </p>
+
 </table>

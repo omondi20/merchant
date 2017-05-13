@@ -8,6 +8,8 @@ end
 def print_stock(stock)
   if stock > 0
 print "In stock"
+  elsif
+print " low stock"
   else
 print "Out of stock"
   end
